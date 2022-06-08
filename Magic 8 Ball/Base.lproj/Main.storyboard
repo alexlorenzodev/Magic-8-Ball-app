@@ -17,16 +17,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="See your future! " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k2S-E2-z9M">
-                                <rect key="frame" x="90" y="97" width="234" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="See your future! " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k2S-E2-z9M">
+                                <rect key="frame" x="88.5" y="132.5" width="237.5" height="38.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
                                 <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSe-df-lx4">
-                                <rect key="frame" x="143" y="649" width="129" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSe-df-lx4">
+                                <rect key="frame" x="142.5" y="625" width="129" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4Mq-EG-AoK"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="sQ6-V8-u1o"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Try me! ">
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="30"/>
@@ -36,13 +38,24 @@
                                     <action selector="tryMeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x7v-Pt-54E"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dKg-Ba-ScL">
-                                <rect key="frame" x="64" y="259" width="287" height="233"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dKg-Ba-ScL">
+                                <rect key="frame" x="64" y="259" width="286" height="233"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="233" id="qTo-Fo-RlH"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <constraints>
+                            <constraint firstItem="dKg-Ba-ScL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="77J-fp-d7S"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bSe-df-lx4" secondAttribute="bottom" constant="187" id="APh-eE-VBj"/>
+                            <constraint firstItem="bSe-df-lx4" firstAttribute="centerX" secondItem="k2S-E2-z9M" secondAttribute="centerX" id="BwQ-0S-SmS"/>
+                            <constraint firstItem="dKg-Ba-ScL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="259" id="MUJ-2B-WiB"/>
+                            <constraint firstItem="dKg-Ba-ScL" firstAttribute="top" secondItem="k2S-E2-z9M" secondAttribute="bottom" constant="88" id="NLF-mk-PJf"/>
+                            <constraint firstItem="bSe-df-lx4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fUC-Gs-ChG"/>
+                            <constraint firstItem="bSe-df-lx4" firstAttribute="centerX" secondItem="dKg-Ba-ScL" secondAttribute="centerX" id="igv-hK-N1E"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="magicBall" destination="dKg-Ba-ScL" id="Q4w-9w-3df"/>
